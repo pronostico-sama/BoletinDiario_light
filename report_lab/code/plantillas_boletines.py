@@ -22,17 +22,18 @@ warnings.filterwarnings("ignore", category=UserWarning)
 DATE_REF = pd.to_datetime('2025-03-31')
 
 # Directorios de entrada y de salida
-dir_sama = os.getenv("SAMA")
+dir_sama = os.getenv("NODO")
+
 
 if dir_sama is None:
     # Set the environment variable DIR to the desired path
-    os.environ['SAMA'] = '/home/jdmantillaq/Documents/SAMA/Boletin_Diario'
+    os.environ['SAMA'] = '/home/sgiraldoc4/BoletinDiario_light'
 
-    dir_sama = os.environ.get("SAMA")
+    dir_sama = os.environ.get("NODO")
 
 
 dir_report_lab = os.path.join(dir_sama, 'report_lab/')
-dir_historicos = os.path.join(dir_report_lab, 'historicos/')
+
 
 
 def clean_txt_files(report):
@@ -236,13 +237,7 @@ def report_horizontal_am(date_now, idx, report, dir_report_lab, dir_sama,
     path_txt_temp = os.path.join(
         dir_sama, 'report_lab', 'txt_boletin', f'{report}', '')
     
-    path_history_day_report = os.path.join(
-        dir_historicos, date_now.strftime('%Y%m%d') ,f'{report}', '')
-    
-    utils.create_path(path_history_day_report)
-    
-    comand = f'cp {path_txt_temp}*.txt {path_history_day_report}'
-    os.system(comand)
+
 
     # -------------------------------------------------------------------------
     # # Observed conditions
@@ -537,13 +532,6 @@ def report_horizontal_pm(date_now, idx, report, dir_report_lab, dir_sama,
     path_txt_temp = os.path.join(
         dir_sama, 'report_lab', 'txt_boletin', f'{report}', '')
     
-    path_history_day_report = os.path.join(
-        dir_historicos, date_now.strftime('%Y%m%d') ,f'{report}', '')
-    
-    utils.create_path(path_history_day_report)
-    
-    comand = f'cp {path_txt_temp}*.txt {path_history_day_report}'
-    os.system(comand)
     # -------------------------------------------------------------------------
     # # Observed conditions
     # -------------------------------------------------------------------------
