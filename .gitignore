@@ -3,6 +3,13 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# pdf, png and jpg files
+*.pdf
+*.png
+*.jpg
+
+!report_lab/plantillas/*.pdf
+
 # C extensions
 *.so
 
