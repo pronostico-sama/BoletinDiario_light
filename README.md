@@ -91,6 +91,19 @@ Una vez ejecutado el script correspondiente y generado el boletín preliminar:
     ```
 Esto producirá el archivo final del boletín con toda la información actualizada.
 
+## **Ejemplo de flujo completo:**
+
+
+1. Ejecutar script preliminar:
+    ```bash
+    bash sama_08.sh
+    ```
+2. Editar archivos .txt en [report_lab/txt_boletin/08/](report_lab/txt_boletin/08/)
+3. Generar boletín final
+    ```bash
+    python report_lab/code/0.boletin_diario_am.py
+    ```
+4. Revisar el resultado en [report_lab/boletines/08/](report_lab/boletines/08/)
 
 
 ## Estructura del Proyecto
