@@ -64,6 +64,13 @@ Estos scripts automatizan los siguientes pasos:
 
 > <span style="color:red"><strong>Nota:</strong></span> El boletín generado en este paso es preliminar y no contiene el texto final.
 
+Ejemplo del boletín generado sin texto:
+<p align="center">
+    <img src="report_lab/boletines/08/086_BoletinMeteorologico_20250625_08_Diaria.png" width="500px" alt="Ejemplo de boletín diario">
+</p>
+
+Los archivos generados de los boletines, tanto preliminares como finales, quedan almacenados en el directorio [`report_lab/boletines`](report_lab/boletines), dentro de la carpeta correspondiente a cada horario (`08` para la mañana y `16` para la tarde). Allí podrá encontrar los boletines producidos para cada día, organizados por tipo y fecha.
+
 ### Edición y generación del boletín final
 
 Una vez ejecutado el script correspondiente y generado el boletín preliminar:
