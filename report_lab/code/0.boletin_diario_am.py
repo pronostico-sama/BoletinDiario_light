@@ -19,6 +19,8 @@ report = '08'
 dir_figures = f'{dir_sama}/graficas/{report}/'
 path_out = f'{dir_sama}/report_lab/boletines/{report}/'
 
+print('\t\033[94mGenerando Boletín...\033[0m\n')
+
 report_horizontal_am(date_now, idx, report, dir_report_lab, dir_sama,
                      dir_figures, path_out)
 

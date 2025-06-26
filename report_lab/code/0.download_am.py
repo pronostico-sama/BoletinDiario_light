@@ -24,11 +24,17 @@ if dir_sama is None:
 # Path where the downloaded figures will be saved
 path_figures = os.path.join(dir_sama, 'graficas', '')
 
+print('\t\033[94mDescargando las gráficas...\033[0m')
 
 # Download the entire folder from Google Drive using gdown and save it to path_figures
-gdown.download_folder(
+result = gdown.download_folder(
     url_dic[report],
     output=path_figures,
-    quiet=False,
-    use_cookies=True
+    quiet=True,
+    use_cookies=True,
 )
+
+if result:
+    print('\t\t\033[92mDescarga completada: ok\033[0m')
+else:
+    print('\t\t\033[91mDescarga fallida\033[0m')
