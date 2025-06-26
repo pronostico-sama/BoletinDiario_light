@@ -90,3 +90,48 @@ Una vez ejecutado el script correspondiente y generado el boletín preliminar:
     python report_lab/code/1.boletin_diario_pm.py
     ```
 Esto producirá el archivo final del boletín con toda la información actualizada.
+
+
+
+## Estructura del Proyecto
+
+```plaintext
+BoletinDiario_light/
+├── sama_08.sh
+├── sama_16.sh
+├── requirements.txt
+├── Definir_variables_entorno.ipynb
+├── graficas/
+│   ├── 08/
+│   └── 16/
+└── report_lab/
+    ├── code/
+    │   ├── 0.boletin_diario_am.py
+    │   ├── 0.clean_txt_files_am.py
+    │   ├── 0.download_am.py
+    │   ├── 1.boletin_diario_pm.py
+    │   ├── 1.clean_txt_files_pm.py
+    │   ├── 1.download_pm.py
+    │   ├── plantillas_boletines.py
+    │   ├── play_AZ.py
+    │   └── utilities.py
+    ├── fonts/
+    ├── plantillas/
+    ├── sound/
+    ├── txt_boletin/
+    │   ├── 08/
+    │   │   ├── 0.obs_goes.txt
+    │   │   ├── 1.manana.txt
+    │   │   ├── 2.tarde.txt
+    │   │   ├── 3.noche.txt
+    │   │   └── 4.madrugada.txt
+    │   └── 16/
+    │       ├── 0.obs_goes.txt
+    │       ├── 1.noche.txt
+    │       ├── 2.madrugada.txt
+    │       ├── 3.manana.txt
+    │       └── 4.tarde.txt
+    └── boletines/
+        ├── 08/
+        └── 16/
+```

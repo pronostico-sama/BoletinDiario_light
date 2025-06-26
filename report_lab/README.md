@@ -2,60 +2,28 @@
 
 Este proyecto genera boletines meteorológicos diarios en formato PDF y PNG utilizando datos de entrada, gráficos y plantillas predefinidas. Los boletines incluyen información sobre condiciones observadas y pronósticos para diferentes jornadas del día.
 
-## Estructura del Proyecto
+## Descripción de los scripts principales
 
-El proyecto está organizado de la siguiente manera:
+* `0.download_am.py` / `1.download_pm.py`: Descargan las imágenes necesarias desde Google Drive usando la librería gdown.
+* `0.clean_txt_files_am.py` / `1.clean_txt_files_pm.`py`: Limpian y preparan los archivos .txt donde se debe ingresar la información del boletín.
+* `0.boletin_diario_am.py` / `1.boletin_diario_pm.py`: Generan el boletín final (PDF y PNG) usando la información de los .txt y las imágenes descargadas.
+* `plantillas_boletines.py`: Contiene las funciones para la generación y diseño de los boletines.
+* `utilities.py`: Funciones auxiliares para manejo de archivos y directorios.
 
-```
-BoletinDiario_light/
-├── report_lab/
-│   ├── code/
-│   │   ├── plantillas_boletines.py
-│   │   ├── 0.boletin_diario_am.py
-│   │   ├── 1.boletin_diario_pm.py
-│   ├── fonts/
-│   ├── txt_boletin/
-│   ├── boletines/
-├── graficas/
-```
+## Edición y generación del boletín final
 
-`Boletin_diario` corresponde al `basedir = os.getenv("SAMA")`
-
-### Archivos principales
-
-- **`plantillas_boletines.py`**: Contiene las funciones principales para generar boletines, incluyendo el manejo de plantillas, estilos de texto, y la integración de imágenes y texto.
-- **`0.boletin_diario_am.py`**: Script para generar boletines de la jornada de la mañana.
-- **`1.boletin_diario_pm.py`**: Script para generar boletines de la jornada de la tarde.
-
-### Archivos necesarios
-* Plantillas PDF: Las plantillas base para los boletines deben estar en la carpeta `report_lab/plantillas/`.
-* Fuentes: Las fuentes necesarias deben estar en la carpeta `report_lab/fonts/`.
-* Gráficos: Los gráficos diarios deben estar en la carpeta `graficas/{report}/`.
-* Archivos de texto: Los textos de entrada deben estar en la carpeta `report_lab/txt_boletin/{report}/`.
+Una vez ejecutado los bash y generado el informe preliminar recuerde completar la información de los archivos `.txt` (ubicados en [`report_lab/txt_boletin/08/`](txt_boletin/08) o [`report_lab/txt_boletin/16/`](txt_boletin/16)).
 
 
-## Requiriments
-```
-numpy==1.26.4
-pandas==2.2.3
-reportlab==4.3.1
-Pillow==11.1.0
-pypdf==5.4.0
-markdown2==2.5.3
-```
+Ejecute el script Python correspondiente para generar el boletín completo:
+* Para la mañana:
+    ```bash
+    python report_lab/code/0.boletin_diario_am.py
+    ```
+* Para la tarde:
+    ```bash
+    python report_lab/code/1.boletin_diario_pm.py
+    ```
 
-# Uso
 
-Generar boletines
-1. Configura las rutas de entrada y salida en los scripts `0.boletin_diario_am.py` y `1.boletin_diario_pm.py`.
-2. Ejecuta el script correspondiente para generar los boletines:
-
-    * Para la jornada de la **mañana**:
-        ```
-        python 0.boletin_diario_am.py
-        ```
-    * Para la jornada de la **tarde**:
-        ```
-        python 1.boletin_diario_pm.py
-        ```
-3. Los boletines generados se guardarán en la carpeta `report_lab/boletines/{report}/` en formato PDF y PNG.
+Los archivos generados de los boletines, tanto preliminares como finales, quedan almacenados en el directorio [boletines](boletines), dentro de la carpeta correspondiente a cada horario (08 para la mañana y 16 para la tarde).
