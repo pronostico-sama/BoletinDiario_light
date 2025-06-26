@@ -2,6 +2,10 @@
 Paquete de códigos necesarios para producir el boletín diario descargando las gráficas de Google Drive.
 
 
+<img src="logo.jpeg" width="300px" alt="SAMA" />
+
+
+
 ## Requisitos
 
 ### Python

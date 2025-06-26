@@ -9,9 +9,11 @@ __pycache__/
 *.jpg
 *.jpeg
 
+# Files to be included in the repository
 !report_lab/plantillas/*.pdf
 !report_lab/boletines/08/086_BoletinMeteorologico_20250625_08_Diaria.png
 !report_lab/boletines/08/086_BoletinMeteorologico_20250625_08_Vertical.png
+!logo.jpeg
 
 # C extensions
 *.so
