@@ -1,5 +1,5 @@
 # BoletinDiario_light
-Paquete de códigos necesarios para producir el boletín diario descargando las gráficas de Google Drive
+Paquete de códigos necesarios para producir el boletín diario descargando las gráficas de Google Drive.
 
 
 ## Requisitos
@@ -17,7 +17,7 @@ conda create --name {env_name} python=3.9
 conda activate {env_name}
 ```
 
-**Recuerde cambiar el nombre del env_name por el que usted decida**
+> **Nota:** Recuerde cambiar el nombre del env_name por el que usted decida
 
 ### Instalación de Dependencias
 Asegúrese de tener `pip` instalado y ejecute el siguiente comando para instalar las dependencias necesarias:

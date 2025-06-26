@@ -7,8 +7,11 @@ __pycache__/
 *.pdf
 *.png
 *.jpg
+*.jpeg
 
 !report_lab/plantillas/*.pdf
+!report_lab/boletines/08/086_BoletinMeteorologico_20250625_08_Diaria.png
+!report_lab/boletines/08/086_BoletinMeteorologico_20250625_08_Vertical.png
 
 # C extensions
 *.so
